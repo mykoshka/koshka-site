@@ -70,9 +70,8 @@ func GetUserProfile(c *fiber.Ctx) error {
 
 	// Fetch reunite collars
 	rows, err = config.DB.Query(`
-        SELECT tag_id FROM reunite_collars WHERE tag_id IN (
-            SELECT unnest(reunite_collars) FROM user_profiles WHERE email = $1
-        )`, userEmail)
+        SELECT tag_id FROM reunite_collars AS rc JOIN public.pet_collars AS pc ON (rc.tag_id = pc.collar_id)
+                      WHERE rc."active" = true AND pc.user_id = $1`, userEmail)
 
 	if err == nil {
 		for rows.Next() {
