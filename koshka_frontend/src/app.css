@@ -1,0 +1,8 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/forms';
+@plugin '@tailwindcss/typography';
+
+@theme {
+    --color-primary: oklch(0.971 0.013 17.38);
+    --color-primary-dar: oklch(0.971 0.013 17.38);
+}
