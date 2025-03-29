@@ -49,6 +49,7 @@ func main() {
 	// Protected routes (authenticated users)
 	protected := app.Group("/api", middleware.JWTMiddleware())
 	protected.Get("/profile", routes.GetUserProfile)
+	protected.Post("/profile/update", routes.UpdateUserProfile)
 	protected.Post("/pet/add", routes.AddPet)
 	protected.Put("/pet/:id", routes.UpdatePet)
 	protected.Delete("/pet/:id", routes.DeletePet)

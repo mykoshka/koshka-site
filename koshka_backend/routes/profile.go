@@ -113,7 +113,35 @@ SELECT p.id, p.name, i.file, p.vaccinated,
 	return c.Status(fiber.StatusOK).JSON(profile)
 }
 
-// Add Collar to profile
+// UpdateUserProfile Updages the user profile
+func UpdateUserProfile(c *fiber.Ctx) error {
+	userEmail := c.Locals("user").(string) // Extract from JWT
+
+	type ProfileUpdate struct {
+		Name         string `json:"name"`
+		Address      string `json:"address"`
+		MobileNumber string `json:"mobile_number"`
+	}
+
+	var profile ProfileUpdate
+	err := c.BodyParser(&profile)
+	if err != nil {
+		return c.Status(fiber.StatusBadRequest).JSON(fiber.Map{"error": "Invalid request body"})
+	}
+
+	// Update user profile
+	_, err = config.DB.Exec(`UPDATE user_profiles SET name = $1, address = $2, mobile_number = $3 WHERE email = $4`,
+		profile.Name, profile.Address, profile.MobileNumber, userEmail)
+
+	if err != nil {
+		log.Println("Error updating ", err)
+		return c.Status(fiber.StatusInternalServerError).JSON(fiber.Map{"error": "Database error while updating user profile"})
+	}
+
+	return c.Status(fiber.StatusOK).JSON("Success")
+}
+
+// AddCollarToProfile Add Collar to profile
 func AddCollarToProfile(c *fiber.Ctx) error {
 	userEmail := c.Locals("user").(string) // Extract from JWT
 	collarID := c.Params("tag")

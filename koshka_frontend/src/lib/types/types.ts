@@ -20,7 +20,7 @@ export interface UserProfile {
     name: string;
     email: string;
     address: string;
-    phone: string;
+    mobile_number: string;
     joined_on: string;
     purchase_history: PurchaseHistory[];
     pets: PetProfile[];

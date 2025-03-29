@@ -311,12 +311,7 @@ func ResetPassword(c *fiber.Ctx) error {
 
 // ChangePassword allows authenticated users to update their password
 func ChangePassword(c *fiber.Ctx) error {
-	userEmail, ok := c.Locals("user").(string)
-
-	// Ensure user is authenticated
-	if !ok || userEmail == "" {
-		return c.Status(fiber.StatusUnauthorized).JSON(fiber.Map{"error": "Unauthorized"})
-	}
+	userEmail := c.Locals("user").(string)
 
 	var req ChangePasswordRequest
 	if err := c.BodyParser(&req); err != nil {

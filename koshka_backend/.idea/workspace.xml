@@ -5,8 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4349bde-972f-4c2c-bfce-21c4c7985ca7" name="Changes" comment="init">
+      <change afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/design/FileUploader.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/design/FileUploaderNoButton.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/design/Switch.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/design/icons.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/profile.go" beforeDir="false" afterPath="$PROJECT_DIR$/routes/profile.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/PetCard.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/PetCard.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/PetProfileModal.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/PetProfileModal.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../koshka_frontend/src/routes/profile/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/../koshka_frontend/src/routes/profile/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../koshka_frontend/src/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/types/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +87,7 @@
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/uploads" />
       <recent name="$PROJECT_DIR$/keys" />
     </key>
   </component>
