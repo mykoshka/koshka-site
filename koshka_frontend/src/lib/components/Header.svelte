@@ -10,7 +10,8 @@
 </script>
 
 <!-- Header -->
-<header class="sticky top-0 z-50 bg-white shadow-sm">
+<div class="sticky top-0 z-50">
+<header class="relative bg-white shadow-sm">
     <div class="container mx-auto px-4 py-4 flex justify-between items-center">
         <!-- Logo and Brand -->
         <a href="/" class="flex items-center gap-2" aria-label="Koahka Home">
@@ -19,11 +20,10 @@
 
         <!-- Navigation -->
         <nav class="hidden md:flex items-center space-x-6">
-            <a href="/food" class="text-gray-600 hover:text-emerald-500 transition-colors">Food</a>
-            <a href="/toys" class="text-gray-600 hover:text-emerald-500 transition-colors">Toys</a>
-            <a href="/beds" class="text-gray-600 hover:text-emerald-500 transition-colors">Beds</a>
-            <a href="/health" class="text-gray-600 hover:text-emerald-500 transition-colors">Health</a>
-            <a href="/accessories" class="text-gray-600 hover:text-emerald-500 transition-colors">Accessories</a>
+            <a href="/products/collars" class="text-gray-600 hover:text-emerald-500 transition-colors">Collars</a>
+            <a href="/products/scratchposts" class="text-gray-600 hover:text-emerald-500 transition-colors">Scratch Posts</a>
+            <a href="/blog" class="text-gray-600 hover:text-emerald-500 transition-colors">Blog</a>
+            <a href="/products/instructions" class="text-gray-600 hover:text-emerald-500 transition-colors">Instructions</a>
         </nav>
 
         <!-- Search -->
@@ -63,3 +63,4 @@
         </div>
     </div>
 </header>
+</div>

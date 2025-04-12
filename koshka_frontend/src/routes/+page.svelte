@@ -2,7 +2,7 @@
 <script>
     import { onMount } from 'svelte';
 
-    // Products data
+    // products data
     const bestSellers = [
         {
             id: 1,
@@ -70,7 +70,7 @@
 
     // For SEO optimization
     onMount(() => {
-        document.title = 'Koahka - Premium Products for Cat Companions';
+        document.title = 'Koahka - Premium products for Cat Companions';
         const metaDescription = document.createElement('meta');
         metaDescription.name = 'description';
         metaDescription.content = 'Thoughtfully crafted premium products for the discerning feline. Shop our selection of cat food, toys, beds, and health accessories.';
@@ -78,7 +78,7 @@
     });
 </script>
 
-<main class="min-h-screen bg-white">
+<main class="min-h-screen bg-white mx-auto">
 
     <!-- Hero Section -->
     <section class="bg-emerald-50 py-16">

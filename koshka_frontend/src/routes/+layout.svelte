@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../app.css';
+    import '../app.css';
     import { userProfile } from '$lib/stores/authStore'
     import { onMount } from 'svelte';
     import { isAuthenticated }  from '$lib/auth'
@@ -28,7 +28,8 @@
 
 
 <Header />
-<div class="min-h-[75vh]">
+<div class="flex flex-row min-h-screen w-full md:w-2/3 mx-auto justify-center items-center">
     <slot />
 </div>
 <Footer />
+

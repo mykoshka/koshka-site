@@ -5,18 +5,39 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="d4349bde-972f-4c2c-bfce-21c4c7985ca7" name="Changes" comment="init">
-      <change afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/design/FileUploader.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/design/FileUploaderNoButton.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/design/Switch.svelte" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/design/icons.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/profile/SideMenu.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/stores/menuStore.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/stores/shopingCart.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/types/menu.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../koshka_frontend/src/routes/products/collars/+page.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../koshka_frontend/src/routes/products/instructions/+page.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../koshka_frontend/src/routes/products/scratchposts/+page.svelte" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../koshka_frontend/src/routes/profile/+page.server.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/helpers/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/helpers/go.mod" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/middleware/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/middleware/auth.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/routes/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/routes/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/routes/go.sum" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/profile.go" beforeDir="false" afterPath="$PROJECT_DIR$/routes/profile.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/PetCard.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/PetCard.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/PetProfileModal.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/PetProfileModal.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../koshka_frontend/src/lib/auth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/auth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/Header.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/Header.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/PetCard.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/profile/PetCard.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/PetProfileModal.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/components/profile/PetProfileModal.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../koshka_frontend/src/lib/stores/authStore.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/stores/authStore.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../koshka_frontend/src/lib/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/types/profile.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../koshka_frontend/src/routes/+layout.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/../koshka_frontend/src/routes/+layout.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../koshka_frontend/src/routes/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/../koshka_frontend/src/routes/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../koshka_frontend/src/routes/cart/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/../koshka_frontend/src/routes/cart/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../koshka_frontend/src/routes/checkout/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/../koshka_frontend/src/routes/checkout/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../koshka_frontend/src/routes/login/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/../koshka_frontend/src/routes/login/+page.svelte" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../koshka_frontend/src/routes/profile/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/../koshka_frontend/src/routes/profile/+page.svelte" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../koshka_frontend/src/types/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/../koshka_frontend/src/lib/types/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../koshka_frontend/src/routes/shop/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/../koshka_frontend/src/routes/shop/+page.svelte" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../koshka_frontend/src/routes/shop/[id]/+page.svelte" beforeDir="false" afterPath="$PROJECT_DIR$/../koshka_frontend/src/routes/shop/[id]/+page.svelte" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -94,7 +115,8 @@
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
+        <option value="bundled-gosdk-d297c17c1fbd-57c114c3cede-org.jetbrains.plugins.go.sharedIndexes.bundled-GO-243.26053.20" />
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-GO-243.26053.20" />
       </set>
     </attachedChunks>
   </component>

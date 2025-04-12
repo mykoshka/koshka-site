@@ -3,9 +3,7 @@
     import { goto } from "$app/navigation";
     import gsap from "gsap";
     import axios from "axios";
-    import type {IuserProfile} from '$lib/stores/authStore'
-    import {userProfile} from '$lib/stores/authStore'
-    import {isAuthenticated} from "$lib/auth";
+    import {storeTokens} from "$lib/auth";
 
     let email = "";
     let password = "";
@@ -14,10 +12,9 @@
     async function login() {
         try {
             const response = await axios.post("http://localhost:3000/login", { email, password });
-            localStorage.setItem("auth_token", response.data.auth_token);
-            $userProfile = { isLoggedIn: true, role: null }
+            storeTokens(response.data.tokens.auth_token, response.data.tokens.refresh_token);
             goto("/profile"); // Redirect to profile after login
-        } catch (error) {
+        } catch {
             errorMessage = "Invalid email or password";
         }
     }

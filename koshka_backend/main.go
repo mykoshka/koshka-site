@@ -32,9 +32,10 @@ func main() {
 
 	// Set up CORS middleware
 	app.Use(cors.New(cors.Config{
-		AllowHeaders: "authorization, Origin,Content-Type,Accept,Content-Length,Accept-Language,Accept-Encoding,Connection,Access-Control-Allow-Origin",
-		AllowOrigins: "*",
-		AllowMethods: "GET,POST,HEAD,PUT,DELETE,OPTIONS",
+		AllowHeaders:     "authorization,refresh,Origin,Content-Type,Accept,Content-Length,Accept-Language,Accept-Encoding,Connection,Access-Control-Allow-Origin",
+		AllowOrigins:     "http://localhost:5173/",
+		AllowCredentials: true,
+		AllowMethods:     "GET,POST,HEAD,PUT,DELETE,OPTIONS",
 	}))
 
 	// Public Routes

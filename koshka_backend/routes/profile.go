@@ -7,7 +7,18 @@ import (
 	"log"
 )
 
-// UserProfileResponse defines the response structure
+// Response
+type Response struct {
+	NewTokens interface{} `json:"new_tokens"`
+	Profile   interface{} `json:"profile"`
+}
+
+type UpdateTokens struct {
+	NewToken   string `json:"new_token"`
+	NewRefresh string `json:"new_refresh"`
+}
+
+// UserProfileResponse defines the request structure for user profile
 type UserProfileResponse struct {
 	Email                  string        `json:"email"`
 	Name                   string        `json:"name"`
@@ -36,6 +47,7 @@ func GetUserProfile(c *fiber.Ctx) error {
 	userEmail := c.Locals("user").(string) // Extract from JWT
 
 	var profile UserProfileResponse
+	var response Response
 
 	// Fetch user profile
 	err := config.DB.QueryRow(`
@@ -110,7 +122,15 @@ SELECT p.id, p.name, i.file, p.vaccinated,
 	} else {
 		log.Println(err)
 	}
-	return c.Status(fiber.StatusOK).JSON(profile)
+
+	response.Profile = profile
+	if c.Locals("new-auth") != nil {
+		var out UpdateTokens
+		out.NewToken = c.Locals("new-auth").(string)
+		out.NewRefresh = c.Locals("new-refresh").(string)
+		response.NewTokens = out
+	}
+	return c.Status(fiber.StatusOK).JSON(response)
 }
 
 // UpdateUserProfile Updages the user profile

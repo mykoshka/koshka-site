@@ -101,12 +101,18 @@ func Login(c *fiber.Ctx) error {
 	// Store token in HTTP-only cookie
 	c.Cookie(&fiber.Cookie{
 		Name:     "auth_token",
-		Value:    token,
+		Value:    token.Token,
+		Secure:   true,
+		HTTPOnly: true,
+	})
+	c.Cookie(&fiber.Cookie{
+		Name:     "refresh_token",
+		Value:    token.Refresh,
 		Secure:   true,
 		HTTPOnly: true,
 	})
 
-	return c.Status(200).JSON(fiber.Map{"message": "Login successful", "auth_token": token})
+	return c.Status(200).JSON(fiber.Map{"message": "Email verified successfully", "tokens": token})
 }
 
 // Generate a random verification token
@@ -217,13 +223,18 @@ func VerifyEmail(c *fiber.Ctx) error {
 
 	// Store token in an HTTP-only cookie
 	c.Cookie(&fiber.Cookie{
-		Name:     "token",
-		Value:    token,
+		Name:     "auth_token",
+		Value:    token.Token,
 		Secure:   true,
 		HTTPOnly: true,
 	})
-
-	return c.Status(200).JSON(fiber.Map{"message": "Email verified successfully", "token": token})
+	c.Cookie(&fiber.Cookie{
+		Name:     "refresh_token",
+		Value:    token.Refresh,
+		Secure:   true,
+		HTTPOnly: true,
+	})
+	return c.Status(200).JSON(fiber.Map{"message": "Email verified successfully", "tokens": token})
 }
 
 // Request Password Reset API
